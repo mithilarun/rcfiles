@@ -1,0 +1,21 @@
+hardstatus on
+#change the hardstatus settings to give an window list at the bottom of the
+#screen, with the time and date and with the current window highlighted
+hardstatus alwayslastline
+#hardstatus string '%{= kG}%-Lw%{= kW}%50> %n%f* %t%{= kG}%+Lw%< %{=kG}%-=%c:%s%{-}'
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+altscreen on
+# PREVIOUS WINDOW
+# # Ctrl + Alt + Left from gnome-terminal
+bindkey ^[[1;7D prev
+#
+# # Ctrl+Alt+Left from putty
+bindkey ^[^[[D prev
+#
+# # NEXT WINDOW
+# # Ctrl + Alt + Right from gnome-terminal
+bindkey ^[[1;7C next
+#
+# # Ctrl+Alt+Right from putty
+bindkey ^[^[[C next
