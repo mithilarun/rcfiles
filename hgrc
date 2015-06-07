@@ -1,0 +1,52 @@
+[extensions]
+hgext.cdm = /opt/onbld/lib/python/onbld/hgext/cdm.py
+mq =
+color =
+graphlog =
+pager =
+
+[email]
+from=mithil.arun@pluribusnetworks.com
+
+[paths]
+onnv-gate=ssh://anon@hg.opensolaris.org//hg/onnv/onnv-gate
+
+[merge-tools]
+vim.args=-d $local $other
+vim.premerge=False
+vim.priority=1
+
+filemerge.gui=True
+filemerge.args=-a $base $local $other $output
+filemerge.priority=1
+filemerge.premerge=False
+
+meld.gui=True
+meld.priority=0
+meld.premerge=False
+
+gpyfm.gui=True
+gpyfm.priority=0
+gpyfm.premerge=False
+
+emacs.args = -q --eval "(ediff-merge-with-ancestor \""$local"\" \""$other"\" \""$base"\" nil \""$output"\")"
+
+[ui]
+username=Mithil Arun <mithil.arun@pluribusnetworks.com>
+style=/opt/onbld/etc/hgstyle
+editor=vim
+merge=emacs
+
+[trusted]
+users = *
+groups = *
+
+[alias]
+blame = annotate --user -c
+
+[pager]
+pager = LESS='FRX' less
+
+[diff]
+showfunc=1
+unified=10
