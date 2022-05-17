@@ -83,7 +83,7 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 "map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Virtualenv support
-py << EOF
+python3 << EOF
 import os
 import sys
 if 'VIRTUAL_ENV' in os.environ:
