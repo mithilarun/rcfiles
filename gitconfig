@@ -1,6 +1,7 @@
-[user]
-#	name = FULL NAME
-#	email = EMAIL
+#[user]
+#	name = Full Name
+#	email = full.name@email.com
+#	signingkey = ssh-ed25519 AAA.....
 
 [color]
 	ui = true
@@ -50,4 +51,4 @@
 [push]
 	default = simple
 [core]
-	editor = /usr/bin/vim
+	editor = nvim
